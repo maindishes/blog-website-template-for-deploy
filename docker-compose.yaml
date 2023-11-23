@@ -2,13 +2,9 @@ services:
   frontend:
     build:
       context: .
-      target: base
+      target: dev
     ports:
       - "3000:3000"
     volumes:
       - .:/app
-    # sh로 진입해서 작업하고 싶을 때 && 개발 초기 환경 구성
-    tty: true
-    stdin_open: true
-    command: ["sh"]
-    working_dir: /app
+    command: ["npm", "run", "dev"]
