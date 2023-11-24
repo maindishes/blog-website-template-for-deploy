@@ -1,3 +1,21 @@
+# 블로그 개발 스터디
+
+이 저장소는 42서울 교육생들이 모여 개인 블로그를 만드는 데 사용되는 보일러플레이트입니다.\
+누구나 자유롭게 가져가서 개선하고 블로그용으로 사용하셔도 됩니다.
+
+기간: 23.11.27 ~ 23.12.22
+
+참여자 목록
+
+- [강지호(jihkang)](https://profile.intra.42.fr/users/jihkang)
+- [김동현(donghyk2)](https://profile.intra.42.fr/users/donghyk2)
+- [김성욱(sungwook)](https://profile.intra.42.fr/users/sungwook)
+- [김소현(sohlee)](https://profile.intra.42.fr/users/sohlee)
+- [김한결(hakim)](https://profile.intra.42.fr/users/hakim)
+- [황성준(sunhwang)](https://profile.intra.42.fr/users/sunhwang)
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -23,6 +41,9 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+
+
+
 ## 블로그 개발 환경
 
 초기 세팅이 어떻게 설정되어 있는지 알려드립니다. 큰 틀에서 봤을 때 아래와 같이 구성되어 있습니다.
@@ -38,6 +59,7 @@ ESLint와 Prettier는 개발을 할 때 코드 퀄리티를 높이고 가독성�
 - CSS 스타일: [Tailwind CSS](https://tailwindcss.com/)
 - 코드 정적 분석: [ESLint](https://eslint.org/)
 - 코드 포맷터: [Prettier](https://prettier.io/)
+- 게시글 서식 언어: [Markdown](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)
 
 Next.js를 pnpm 명령을 통해 설치했고 설치 과정 중에 옵션으로 Typescript, ESLint, Tailwind CSS를 사용하겠다고 설정했습니다.
 
