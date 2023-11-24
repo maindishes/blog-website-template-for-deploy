@@ -13,7 +13,7 @@ FROM base AS build
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
 FROM base AS dev
-RUN pnpm install
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install
 
 FROM base
 COPY --from=prod-deps /app/node_modules /app/node_modules
