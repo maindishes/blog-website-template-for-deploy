@@ -41,9 +41,6 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-
-
-
 ## 블로그 개발 환경
 
 초기 세팅이 어떻게 설정되어 있는지 알려드립니다. 큰 틀에서 봤을 때 아래와 같이 구성되어 있습니다.
@@ -61,10 +58,8 @@ ESLint와 Prettier는 개발을 할 때 코드 퀄리티를 높이고 가독성�
 - 코드 포맷터: [Prettier](https://prettier.io/)
 - 게시글 서식 언어: [Markdown](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)
 
-Next.js를 pnpm 명령을 통해 설치했고 설치 과정 중에 옵션으로 Typescript, ESLint, Tailwind CSS를 사용하겠다고 설정했습니다.
-
-VS Code에서 개발을 할 때, 저장 시 Prettier가 적용되면 코드 라인을 통일할 수 있어서 Prettier를 추가했습니다.
-
+Next.js를 pnpm 명령을 통해 설치했고 설치 과정 중에 옵션으로 Typescript, ESLint, Tailwind CSS를 사용하겠다고 설정했습니다.\
+VS Code에서 개발을 할 때, 저장 시 Prettier가 적용되면 코드 라인을 통일할 수 있어서 Prettier를 추가했습니다.\
 그래서 VS Code를 사용하실 때는 아래에 나온 Extension을 설치하시길 바랍니다. 이 extensions을 설치하면 개발을 할 때 많은 도움을 줍니다.
 
 - Tailwind CSS IntelliSense
@@ -80,10 +75,11 @@ VS Code에서 개발을 할 때, 저장 시 Prettier가 적용되면 코드 라�
 ### settings.json
 
 VS Code에서 커맨드 팔레트(command + shift + p)를 통해 `Preferences: Open User Settings (JSON)`를 입력하면 파일이 하나 열립니다.\
-저장할때마다 Prettier가 동작할 수 있도록 formatter 지정과 저장 시 foramt을 한다는 옵션을 설정합니다.
+저장할때마다 Prettier가 동작할 수 있도록 formatter 지정과 저장 시 foramt을 한다는 옵션을 설정하기 위해 아래 내용을 복사합니다.
 
 ```json
 {
+	// ...[기존 설정들에서 추가],
     "[typescriptreact]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
