@@ -79,7 +79,7 @@ VS Code에서 커맨드 팔레트(command + shift + p)를 통해 `Preferences: O
 
 ```json
 {
-	// ...[기존 설정들에서 추가],
+    // ...[기존 설정들에서 추가],
     "[typescriptreact]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
