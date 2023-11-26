@@ -80,6 +80,10 @@ VS Code에서 커맨드 팔레트(command + shift + p)를 통해 `Preferences: O
 ```json
 {
     // ...[기존 설정들에서 추가],
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
     "[typescriptreact]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
