@@ -14,6 +14,20 @@
 - [김한결(hakim)](https://profile.intra.42.fr/users/hakim)
 - [황성준(sunhwang)](https://profile.intra.42.fr/users/sunhwang)
 
+## 깃허브 블로그용 저장소 생성
+깃허브 계정으로 로그인한 뒤, Public 저장소를 하나 생성해야 합니다.\
+저장소 이름은 `{사용자명}.github.io`로 만들어야 합니다.\
+Settings -> General -> Default branch는 dev(개발 브랜치)로 변경합니다(main 브랜치는 깃허브 액션으로 만들어진 빌드 파일들이 저장될 예정입니다).\
+그리고 이 저장소를 만들어진 블로그 원격 저장소로 올립니다.
+
+blog-website-template가 연결된 원격 저장소를 지우고 블로그 원격 저장소와 연결해야 합니다.
+```sh
+git remote remove origin
+git remote add origin git@github.com:{사용자명}/{사용자명}.github.io.git
+git branch -M dev
+git push -u origin dev
+```
+
 ---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
