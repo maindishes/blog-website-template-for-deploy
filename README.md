@@ -10,8 +10,8 @@
 - [강지호(jihkang)](https://profile.intra.42.fr/users/jihkang)
 - [김동현(donghyk2)](https://profile.intra.42.fr/users/donghyk2)
 - [김성욱(sungwook)](https://profile.intra.42.fr/users/sungwook)
-- [김소현(sohlee)](https://profile.intra.42.fr/users/sohlee)
 - [김한결(hakim)](https://profile.intra.42.fr/users/hakim)
+- [이소현(sohlee)](https://profile.intra.42.fr/users/sohlee)
 - [황성준(sunhwang)](https://profile.intra.42.fr/users/sunhwang)
 
 ## 깃허브 블로그용 저장소 생성
