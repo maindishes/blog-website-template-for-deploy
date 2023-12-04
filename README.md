@@ -73,6 +73,18 @@ ESLint와 Prettier는 개발을 할 때 코드 퀄리티를 높이고 가독성�
 - 게시글 서식 언어: [Markdown](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)
 - ⭐️ SSG 설정 방식 참고: [Contentlayer](https://contentlayer.dev/docs/getting-started-cddd76b7#typescript-configuration)
 
+### Contentlayer 설정하는 법
+⭐️ Contentlayer를 개인 repo에 추가하고 싶은 경우 해야 하는 게 있습니다.\
+각 파일을 직접 확인하고 비교해서 추가하시기 바랍니다!
+
+- `pnpm install contentlayer next-contentlayer date-fns` 로 deps 추가
+- next.config.js에서 설정 추가
+- tsconfig.json 설정 변경
+- .gitignore에 .conentlayer를 Git에서 제외
+- conentlayer.config.ts 파일 추가
+- app/page.tsx 참고해서 allPost나 Post 사용법 확인
+
+
 Next.js를 pnpm 명령을 통해 설치했고 설치 과정 중에 옵션으로 Typescript, ESLint, Tailwind CSS를 사용하겠다고 설정했습니다.\
 VS Code에서 개발을 할 때, 저장 시 Prettier가 적용되면 코드 라인을 통일할 수 있어서 Prettier를 추가했습니다.\
 그래서 VS Code를 사용하실 때는 아래에 나온 Extension을 설치하시길 바랍니다. 이 extensions을 설치하면 개발을 할 때 많은 도움을 줍니다.
