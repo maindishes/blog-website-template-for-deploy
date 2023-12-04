@@ -71,6 +71,7 @@ ESLint와 Prettier는 개발을 할 때 코드 퀄리티를 높이고 가독성�
 - 코드 정적 분석: [ESLint](https://eslint.org/)
 - 코드 포맷터: [Prettier](https://prettier.io/)
 - 게시글 서식 언어: [Markdown](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)
+- ⭐️ SSG 설정 방식 참고: [Contentlayer](https://contentlayer.dev/docs/getting-started-cddd76b7#typescript-configuration)
 
 Next.js를 pnpm 명령을 통해 설치했고 설치 과정 중에 옵션으로 Typescript, ESLint, Tailwind CSS를 사용하겠다고 설정했습니다.\
 VS Code에서 개발을 할 때, 저장 시 Prettier가 적용되면 코드 라인을 통일할 수 있어서 Prettier를 추가했습니다.\
