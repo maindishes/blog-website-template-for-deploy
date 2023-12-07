@@ -37,6 +37,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out  # 빌드된 결과물이 있는 디렉터리에 맞게 수정
+          publish_dir: ./next  # 빌드된 결과물이 있는 디렉터리에 맞게 수정
       - name: Check file
-        run: ls -l ./out
+        run: ls -l ./next
