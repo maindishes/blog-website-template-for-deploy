@@ -24,7 +24,7 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
 
 FROM base AS dev-deps
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
-  if [ -f pnpm-lock.yaml ]; then pnpm install; \
+  if [ -f pnpm-lock.yaml ]; then pnpm install -y; \
   else echo "Lockfile not found." && exit 1; \
   fi
 
