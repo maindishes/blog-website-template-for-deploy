@@ -25,7 +25,7 @@ jobs:
         run: pnpm install --force
 
       - name: Build
-        run: pnpm run build
+        run: pnpm build
 
   deploy:
     runs-on: ubuntu-latest
