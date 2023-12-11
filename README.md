@@ -81,7 +81,7 @@ ESLint와 Prettier는 개발을 할 때 코드 퀄리티를 높이고 가독성�
 - next.config.js에서 설정 추가
 - tsconfig.json 설정 변경
 - .gitignore에 .conentlayer를 Git에서 제외
-- conentlayer.config.ts 파일 추가
+- contentlayer.config.ts 파일 추가
 - app/page.tsx 참고해서 allPost나 Post 사용법 확인
 
 
