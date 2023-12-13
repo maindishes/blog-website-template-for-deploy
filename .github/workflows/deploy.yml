@@ -24,11 +24,12 @@ jobs:
         run: |
           pnpm install
           pnpm run build
-
+      - name: Check file 
+        run: ls -al
       - name: Deploy 🚀
         # https://github.com/JamesIves/github-pages-deploy-action
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: out
+          folder: .next
 
