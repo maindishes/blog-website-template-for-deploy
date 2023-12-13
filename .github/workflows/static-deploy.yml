@@ -26,6 +26,12 @@ jobs:
 
       - name: Build and export 
         run: pnpm run build
+      
+      - name: Archive Build Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifacts
+          path: ./next  # 빌드된 결과물이 있는 디렉터리에 맞게 수정
 
   deploy:
     runs-on: ubuntu-latest
@@ -33,6 +39,11 @@ jobs:
     needs: build
 
     steps:
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifacts
+          path: ./next  # 빌드된 결과물을 다운로드할 디렉터리에 맞게 수정
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Deploy to GitHub Pages
