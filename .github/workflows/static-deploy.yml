@@ -25,7 +25,7 @@ jobs:
         run: pnpm install --force
 
       - name: Build and export 
-        run: pnpm run build
+        run: pnpm run build && pnpm run export
       
       - name: Archive Build Artifacts
         uses: actions/upload-artifact@v2
@@ -33,7 +33,7 @@ jobs:
           name: build-artifacts
           path: ./out  # 빌드된 결과물이 있는 디렉터리에 맞게 수정
       - name: Check file
-        run : ls -l
+        run : ls -al
 
   deploy:
     runs-on: ubuntu-latest
