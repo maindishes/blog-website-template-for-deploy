@@ -23,8 +23,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           pnpm install
-          pnpm run build
-          pnpm run export 
+          pnpm run build 
       - name: Check file 
         run: ls -al
       - name: Deploy 🚀
