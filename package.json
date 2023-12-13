@@ -1,7 +1,8 @@
 {
-  "name": "blog-website-template",
+  "name": "blog-website-template-deploy",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://maindishes.github.io/blog-website-template-deploy",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
