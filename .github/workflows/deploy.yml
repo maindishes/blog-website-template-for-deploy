@@ -24,7 +24,7 @@ jobs:
         run: |
           pnpm install
           pnpm run build
-          touch out/.nojekyll
+          echo "" > out/.nojekyll
 
       - name: Deploy 🚀
         # https://github.com/JamesIves/github-pages-deploy-action
