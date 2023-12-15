@@ -1,31 +1,35 @@
-import { Post, allArticles, allPosts } from 'contentlayer/generated'
+import { allArticles } from '@/.contentlayer/generated/index.mjs'
+import { Article } from 'contentlayer/generated'
 import { compareDesc, format, parseISO } from 'date-fns'
 import Link from 'next/link'
 
-function PostCard(post: Post) {
+function ArticleCard(article: Article) {
   return (
     <div className="mb-8">
       <h2 className="mb-1 text-xl">
         <Link
-          href={post.url}
+          href={article.url}
           className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
         >
-          {post.title}
+          {article.title}
         </Link>
       </h2>
-      <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
-        {format(parseISO(post.date), 'LLLL d, yyyy')}
+      <time
+        dateTime={article.date}
+        className="mb-2 block text-xs text-gray-600"
+      >
+        {format(parseISO(article.date), 'LLLL d, yyyy')}
       </time>
       <div
         className="text-sm [&>*:last-child]:mb-0 [&>*]:mb-3"
-        dangerouslySetInnerHTML={{ __html: post.body.html }}
+        dangerouslySetInnerHTML={{ __html: article.body.html }}
       />
     </div>
   )
 }
 
-export default function Home() {
-  const posts = allPosts.sort((a, b) =>
+export default function Article() {
+  const articles = allArticles.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   )
 
@@ -35,14 +39,14 @@ export default function Home() {
         <h1 className="mb-8 text-center text-2xl font-black">
           Next.js + Contentlayer Example
         </h1>
-        {posts.map((post, idx) => (
-          <PostCard key={idx} {...post} />
+        {articles.map((article, idx) => (
+          <ArticleCard key={idx} {...article} />
         ))}
         <Link
-          href="/articles"
+          href="/"
           className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
         >
-          View all articles
+          View all posts
         </Link>
       </div>
     </main>
