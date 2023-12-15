@@ -1,5 +1,4 @@
-import { allArticles } from '@/.contentlayer/generated/index.mjs'
-import { Article } from 'contentlayer/generated'
+import { Article, allArticles } from 'contentlayer/generated'
 import { compareDesc, format, parseISO } from 'date-fns'
 import Link from 'next/link'
 
