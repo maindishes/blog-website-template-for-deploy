@@ -1,20 +1,23 @@
-FROM node:lts-alpine3.18
+FROM node:lts-alpine3.18 AS base
+
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME/bin:$PATH"
-ENV TZ=Asia/Seoul
-
 RUN corepack enable
-
-# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
-RUN apk add --no-cache libc6-compat tzdata && \
-    cp /usr/share/zoneinfo/$TZ /etc/localtime && \
-    echo $TZ > /etc/timezone
-
+COPY . /app
 WORKDIR /app
 
-EXPOSE 3000
+FROM base AS prod-deps
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --fronzen-lockfile
 
-COPY . .
+FROM base AS build
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
-# For development
-CMD [ "sh", "./docker-cmd.sh" ]
+FROM base AS dev
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install
+
+FROM base
+COPY --from=prod-deps /app/node_modules /app/node_modules
+COPY --from=build /app/dist /app/dist
+COPY --from=dev /app/node_modules /app/node_modules
+EXPOSE 8000
+CMD [ "pnpm", "start" ]

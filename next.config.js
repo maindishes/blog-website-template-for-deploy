@@ -1,12 +1,6 @@
 const { withContentlayer } = require('next-contentlayer')
 
 /** @type {import('next').NextConfig} */
-const nextConfig = { 
-		reactStrictMode: true, 
-		swcMinify: true,
-		output: 'export',
-		basePath: '/blog-website-template-for-deploy',
-		assetPrefix: '/blog-website-template-for-deploy/',
-}
+const nextConfig = { reactStrictMode: true, swcMinify: true}
 
 module.exports = withContentlayer(nextConfig)
