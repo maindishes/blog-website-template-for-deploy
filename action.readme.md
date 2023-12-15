@@ -15,3 +15,7 @@ const nextConfig = {
 
 module.exports = withContentlayer(nextConfig)
 ```
+
+- next 에서 export 명령어를 쓰면 정적페이지를 따로 ./out 에 빼준다.
+- 근데 최신 버전에선 next export 명령어가 removed가 되었다.
+- https://nextjs.org/docs/pages/building-your-application/deploying/static-exports
